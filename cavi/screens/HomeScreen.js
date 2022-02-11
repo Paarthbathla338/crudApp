@@ -13,7 +13,7 @@ const HomeScreen = () => {
         .then(()=>{
             navigation.replace("Login")
         })
-        .catch(err=>alert(error.message))
+        .catch(error=>alert(error.message))
     }
   return (
     <View style={styles.container}>
