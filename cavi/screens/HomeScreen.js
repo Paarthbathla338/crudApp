@@ -35,7 +35,7 @@ const HomeScreen = () => {
 }}/>
 
 <Tabs.Screen name="Profile" component={ProfileScreen} options={{
-  tabBarIcon: ({ color }) => <Ionicons name="person" size={30}  color={color} style={{fontSize:35}}  />,
+  tabBarIcon: ({ color }) => <AntDesign name="profile" size={30}  color={color} style={{fontSize:35}}  />,
 }}/>
 
 
