@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { auth } from '../firebase'
 import { useNavigation } from '@react-navigation/core'
 import image from "../assets/home.png"
 import { Ionicons,Entypo,AntDesign,FontAwesome5,MaterialIcons,FontAwesome,SimpleLineIcons,Fontisto } from '@expo/vector-icons';
@@ -11,6 +10,7 @@ import CaviLevels from "./CaviLevels"
 import AppointmentScreen from "./AppointmentScreen"
 import HomeScreen1 from "./HomeScreen1"
 import ProfileScreen from "./ProfileScreen"
+import AppointmentScreen1 from "./AppointmentScreen1"
 
 
 
@@ -25,11 +25,8 @@ const HomeScreen = () => {
 
 <Tabs.Screen name="Home" component={HomeScreen1}         options={{
   tabBarIcon: ({ color }) => <Entypo name="home" size={30}  color={color} style={{fontSize:35}}  />,
-}}
+}} 
 />
-<Tabs.Screen name="CaviLevels" component={CaviLevels}   options={{
-  tabBarIcon: ({ color }) => <SimpleLineIcons name="graph" size={30}  color={color} style={{fontSize:35}}  />,
-}}/>
 <Tabs.Screen name="Appointments" component={AppointmentScreen} options={{
   tabBarIcon: ({ color }) => <Ionicons name="person" size={30}  color={color} style={{fontSize:35}}  />,
 }}/>

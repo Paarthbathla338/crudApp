@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,Image,TouchableOpacity,ScrollView} from 'react-native'
+import { StyleSheet, Text, View ,Image,TouchableOpacity,ScrollView,StatusBar} from 'react-native'
 import React from 'react'
 import image from "../assets/search.png"
 
@@ -28,6 +28,8 @@ const AppointmentScreen = () => {
   
   return (
     <View>
+      <StatusBar hidden />
+
     <Text style={styles.heading}>Book an Appointment</Text>
     {data.map(doctors=>{
       return(

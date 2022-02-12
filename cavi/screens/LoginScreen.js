@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Image } from 'react-native'
 import React, { useEffect } from 'react'
 import { auth } from '../firebase'
 import { useNavigation } from '@react-navigation/core'
+import image from "../assets/login.png"
 
 
 
@@ -43,7 +44,13 @@ const LoginScreen = () => {
     }
   
     return (
-    <KeyboardAvoidingView style={styles.container} behavior="padding">
+        
+    <View style={styles.container} behavior="padding">
+        <Image style={styles.image} source={image}/>
+
+    <View style={styles.container1}>
+
+
 
     <View style={styles.inputContainer}>
         <TextInput
@@ -76,11 +83,11 @@ const LoginScreen = () => {
         </TouchableOpacity>
 
     </View>
-
+        </View>
 
       
       
-    </KeyboardAvoidingView>
+    </View>
   )
 }
 
@@ -88,9 +95,6 @@ export default LoginScreen
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
     },
 
     inputContainer:{
@@ -105,7 +109,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical:10,
         borderRadius: 10,
-        marginTop:5
+        marginTop:5,
+        
 
     },
 
@@ -113,7 +118,8 @@ const styles = StyleSheet.create({
         width: "60%",
         justifyContent:"center",
         alignItems:"center",
-        marginTop:40
+        marginTop:40,
+        
     },
     button:{
         backgroundColor:"#0782F9",
@@ -139,6 +145,18 @@ const styles = StyleSheet.create({
         color:"#0782F9",
         fontWeight:"700",
         fontSize:16,
+
+    },
+    image:{
+        width: "100%",
+        height: "60%",
+
+    },
+    container1:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop:120,
 
     }
 })
